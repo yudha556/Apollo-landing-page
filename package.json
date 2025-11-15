@@ -1,4 +1,20 @@
 {
+  "name": "apollo-landing-page",
+  "version": "1.0.0",
+  "description": "Apollo - Advanced Programming and Online Learning Laboratory landing page",
+  "main": "index.html",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./src/output.css",
+    "dev": "tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "keywords": [
+    "landing-page",
+    "tailwind",
+    "responsive",
+    "apollo"
+  ],
+  "author": "yudha556",
+  "license": "MIT",
   "dependencies": {
     "@tailwindcss/cli": "^4.1.17",
     "tailwindcss": "^4.1.17"

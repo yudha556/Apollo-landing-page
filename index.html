@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./src/output.css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body class="flex flex-col">
+    <!-- Header -->
+    <div
+      class="flex flex-row items-center justify-between w-full h-16 md:h-full shadow-lg px-6 md:px-16 py-3 md:py-0 sticky z-10 top-0 bg-white"
+    >
+      <img src="./assets/logo-header.svg" alt="logo" class="h-full " />
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex flex-row items-center gap-8">
+        <a href="#home" class="text-lg text-black hover:text-gray-500 cursor-pointer transition-all">
+          Home
+        </a>
+        <a href="#features" class="text-lg text-black hover:text-gray-500 cursor-pointer transition-all">
+          Features
+        </a>
+
+        <button
+          class="bg-white items-center justify-center flex border-blue-500 text-blue-500 py-3 px-8 border rounded-xl cursor-pointer hover:bg-gray-200 hover:border-gray-300 hover:shadow-xl *:transition-all duration-300"
+        >
+          Sign In
+        </button>
+        <button
+          class="bg-blue-500 items-center justify-center flex border-blue-500 hover:border-blue-300 text-white py-3 px-7 border rounded-xl cursor-pointer hover:bg-blue-300 hover:shadow-xl *:transition-all duration-300"
+        >
+          Sign Up
+        </button>
+      </div>
+
+      <!-- Burger Menu Button -->
+      <button
+        id="burgerBtn"
+        class="md:hidden flex flex-col gap-1 cursor-pointer"
+        aria-label="Toggle menu"
+      >
+        <span class="block w-6 h-0.5 bg-black transition-all duration-300" id="line1"></span>
+        <span class="block w-6 h-0.5 bg-black transition-all duration-300" id="line2"></span>
+        <span class="block w-6 h-0.5 bg-black transition-all duration-300" id="line3"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Sidebar -->
+    <div
+      id="sidebar"
+      class="fixed top-0 right-0 h-screen w-64 bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-50 md:hidden flex flex-col"
+    >
+      <!-- Close Button -->
+      <button
+        id="closeBtn"
+        class="absolute top-6 right-6 text-2xl font-bold text-gray-600"
+        aria-label="Close menu"
+      >
+        ×
+      </button>
+
+      <!-- Sidebar Navigation -->
+      <div class="flex flex-col gap-6 p-8 pt-16">
+        <a href="#home" class="text-lg text-black hover:text-gray-500 cursor-pointer transition-all">
+          Home
+        </a>
+        <a href="#features" class="text-lg text-black hover:text-gray-500 cursor-pointer transition-all">
+          Features
+        </a>
+
+        <button
+          class="bg-white items-center justify-center flex border-blue-500 text-blue-500 py-3 px-8 border rounded-xl cursor-pointer hover:bg-gray-200 hover:border-gray-300 hover:shadow-xl transition-all duration-300 w-full"
+        >
+          Sign In
+        </button>
+        <button
+          class="bg-blue-500 items-center justify-center flex border-blue-500 hover:border-blue-300 text-white py-3 px-7 border rounded-xl cursor-pointer hover:bg-blue-300 hover:shadow-xl transition-all duration-300 w-full"
+        >
+          Sign Up
+        </button>
+      </div>
+    </div>
+
+    <!-- Sidebar Overlay -->
+    <div
+      id="overlay"
+      class="fixed inset-0 backdrop-blur-sm hidden z-40 md:hidden bg-black/30"
+    ></div>
+
+    <!-- hero -->
+    <section id="home"
+      class="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-10 items-center justify-between w-full py-6 md:py-16 px-6 md:px-16 min-h-screen md:h-full"
+    >
+      <div class="w-full flex flex-col gap-8 items-start">
+        <h1 class="text-3xl md:text-5xl font-bold text-blue-500">
+          LEARN, BUILD, & SHOWCASE <br />ALL IN ONE PLATFORM
+        </h1>
+        <p class="text-base md:text-lg">
+          APOLLO is the Advanced Programming and Online Learning Laboratory that
+          combines LMS, Project Management, and Portfolio in a seamless
+          ecosystem. Learn new skills, collaborate on real projects, and
+          showcase your achievements—all within one integrated platform.
+        </p>
+        <div class="flex flex-col md:flex-row gap-4 items-center w-full md:w-auto">
+          <button
+            class="py-3 px-8 bg-blue-500 flex items-center justify-center font-semibold rounded-xl text-white hover:bg-blue-300 hover:border-blue-300 hover:shadow-xl duration-300 transition-all w-full md:w-auto"
+          >
+            Get Started For Free
+          </button>
+          <button
+            class="py-3 px-8 bg-white border-blue-500 border-2 text-blue-500 font-semibold flex items-center justify-center rounded-xl cursor-pointer hover:shadow-xl hover:bg-gray-300 hover:border-gray-300 transition-all duration-300 w-full md:w-auto"
+          >
+            Explore Features
+          </button>
+        </div>
+      </div>
+
+      <div class="h-full w-full flex items-center justify-center">
+        <img src="./assets/ilustation.svg" alt="ilustation" class="w-full max-w-md md:max-w-full" />
+      </div>
+    </section>
+
+    <!-- section 1 -->
+    <section id="features"
+      class="w-full bg-[#EDEBFE] px-6 md:px-16 py-10 md:py-20 flex flex-col items-center justify-center gap-6 min-h-screen md:h-full"
+    >
+      <div
+        class="w-full h-full items-center justify-center flex flex-col gap-3"
+      >
+        <h1 class="font-semibold text-2xl md:text-3xl text-black text-center">
+          What You'll Get With Apollo
+        </h1>
+        <p class="text-base md:text-lg text-black text-center">
+          A powerful ecosystem designed to help you learn faster, build smarter,
+          and showcase better.
+        </p>
+      </div>
+
+      <div class="flex flex-col md:flex-row gap-6 items-center justify-between w-full">
+        <div class="bg-white h-80 w-full px-6  py-6 items-center justify-center flex flex-col gap-3 shadow-xl rounded-xl">
+            <div class="items-center justify-center flex h-20 w-20 bg-blue-300 rounded-xl">
+                <div class="flex items-center justify-center h-14 w-14 bg-blue-500 rounded-xl">
+                    <img src="./assets/globe.svg" alt="logo" class="bg-cover" />
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-3 items-center justify-center">
+                <h1 class="font-semibold text-lg text-center"> Learning Management System</h1>
+                <p class="text-sm font-normal text-center">Master programming skills with structured modules, interactive lessons, quizzes, and coding challenges.  Learn by doing, track your progress, and stay on the path to becoming job-ready.</p>
+            </div>
+        </div>
+        <div class="bg-white h-80 w-full px-6  py-6 items-center justify-center flex flex-col gap-3 shadow-xl rounded-xl">
+            <div class="items-center justify-center flex h-20 w-20 bg-green-300 rounded-xl">
+                <div class="flex items-center justify-center h-14 w-14 bg-green-500 rounded-xl">
+                    <img src="./assets/code.svg" alt="logo" class="bg-cover" />
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-3 items-center justify-center">
+                <h1 class="font-semibold text-lg text-center">Project Management</h1>
+                <p class="text-sm font-normal text-center">Turn your knowledge into real experience. Collaborate with teammates, manage tasks, and track progress — just like working on real-world projects.</p>
+            </div>
+        </div>
+        <div class="bg-white h-80 w-full px-6  py-6 items-center justify-center flex flex-col gap-3 shadow-xl rounded-xl">
+            <div class="items-center justify-center flex h-20 w-20 bg-red-300 rounded-xl">
+                <div class="flex items-center justify-center h-14 w-14 bg-red-500 rounded-xl">
+                    <img src="./assets/portofolio.svg" alt="logo" class="bg-cover" />
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-3 items-center justify-center">
+                <h1 class="font-semibold text-lg text-center">Portfolio Management</h1>
+                <p class="text-sm font-normal text-center">Showcase your best work in one place. Every project you build in Apollo can be instantly added to your portfolio to share with recruiters, peers, and the world.</p>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- section 2 -->
+     <section id="cta" class="w-full py-10 md:py-20 px-6 md:px-16 flex items-center justify-center min-h-screen md:h-full">
+        <div class="w-full bg-[#E1EBFE] rounded-xl flex flex-col space-y-6 items-center justify-center py-10 md:py-14 px-6 md:px-0">
+            <img src="./assets/RoketCTA.svg" alt="roket" class="w-20 md:w-auto" />
+            <h1 class="font-semibold text-xl md:text-2xl text-black text-center">Ready to Launch Your Journey?</h1>
+            <p class="text-base md:text-lg text-center">Join Apollo today and experience the all-in-one ecosystem to learn <br> programming, build real projects, and showcase your portfolio.</p>
+            <button class="bg-blue-500 items-center justify-center flex py-3 px-8 font-semibold text-white hover:bg-blue-300 hover:shadow-sm transition-all duration-300 cursor-pointer rounded-xl w-full md:w-auto">Get Started Free</button>
+        </div>
+     </section>
+
+     <!-- footer -->
+      <footer class="flex flex-col w-full h-full items-center justify-center bg-[#121827] px-6 md:px-16 pt-10 md:pt-16">
+        <div class="flex flex-col md:flex-row items-start justify-between w-full pt-4 pb-10 md:pb-16 gap-8 md:gap-0">
+
+            <!-- contact -->
+            <div class="flex flex-col gap-8 items-start">
+                <img src="./assets/logo-footer.svg" alt="lopgo" />
+                <P class="text-white text-sm">Advanced Programming and Online Learning Laboratory</P>
+
+                <div class="flex flex-col gap-4 items-start">
+                    <div class="flex flex-row items-center gap-2 justify-start">
+                        <img src="./assets/solar_phone-linear.svg" alt="phone" />
+                        <p class="text-gray-500 text-sm ">+62 087-3423-2342</p>
+                    </div>
+                    <div class="flex flex-row items-center gap-2 justify-start">
+                        <img src="./assets/material-symbols_mail-outline.svg" alt="phone" />
+                        <p class="text-gray-500 text-sm ">apollo@apollo.com</p>
+                    </div>
+                    <div class="flex flex-row items-center gap-2 justify-start">
+                        <img src="./assets/tdesign_location.svg" alt="phone" />
+                        <p class="text-gray-500 text-sm ">Kampus 4 Universitas Ahmad Dahlan</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="flex flex-col gap-4 items-start">
+                <h1 class="text-white font-semibold">Quick Links</h1>
+                <a href="#home" class="text-gray-500 text-sm">Home</a>
+                <a href="#features" class="text-gray-500 text-sm">Features</a>
+                <p class="text-gray-500 text-sm">How it works</p>
+            </div>
+
+            <!-- Resource -->
+            <div class="flex flex-col items-start gap-4">
+                <h1 class="font-semibold text-white">Resource</h1>
+                <p class="text-gray-500 font-sm">Support</p>
+                <p class="text-gray-500 font-sm">Privacy policy</p>
+                <p class="text-gray-500 font-sm">Terms of use</p>
+            </div>
+        </div>
+
+        <div class="border-t-2 border-gray-300 w-full h-16 md:h-20 flex items-center justify-center">
+            <p class="text-gray-500 text-xs md:text-sm text-center">©2025 APOLLO - All rights reserved</p>
+        </div>
+      </footer>
+
+      <!-- Mobile Menu Toggle Script -->
+      <script>
+        const burgerBtn = document.getElementById('burgerBtn');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        const closeBtn = document.getElementById('closeBtn');
+        const line1 = document.getElementById('line1');
+        const line2 = document.getElementById('line2');
+        const line3 = document.getElementById('line3');
+
+        function toggleMenu() {
+          sidebar.classList.toggle('translate-x-full');
+          overlay.classList.toggle('hidden');
+          
+          // Animate burger lines
+          line1.classList.toggle('rotate-45');
+          line1.classList.toggle('translate-y-2');
+          line2.classList.toggle('opacity-0');
+          line3.classList.toggle('-rotate-45');
+          line3.classList.toggle('-translate-y-2');
+        }
+
+        burgerBtn.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+
+        // Close menu when clicking on sidebar items
+        document.querySelectorAll('#sidebar a, #sidebar button').forEach(item => {
+          item.addEventListener('click', toggleMenu);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href !== '#') {
+              e.preventDefault();
+              const target = document.querySelector(href);
+              if (target) {
+                target.scrollIntoView({
+                  behavior: 'smooth',
+                  block: 'start'
+                });
+              }
+            }
+          });
+        });
+      </script>
+      
+  </body>
+</html>
